@@ -1,0 +1,16 @@
+PODS:
+  - TagView (0.1.0)
+
+DEPENDENCIES:
+  - TagView (from `../`)
+
+EXTERNAL SOURCES:
+  TagView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TagView: 47010b5eb273a54defb93103d05f34446705fc7e
+
+PODFILE CHECKSUM: f12f520a80dded3d7e3cc410777173b021bba1ca
+
+COCOAPODS: 1.3.1

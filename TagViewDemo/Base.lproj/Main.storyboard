@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TagViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c5C-xA-W6D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zo5-KL-CZc">
+                                <rect key="frame" x="0.0" y="100" width="375" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBh-Ec-Fs8" customClass="TagView" customModule="TagViewDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="19"/>
+                                        <color key="backgroundColor" red="0.96078431610000004" green="0.70588237050000002" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WBh-Ec-Fs8" firstAttribute="top" secondItem="Zo5-KL-CZc" secondAttribute="top" id="5hv-z1-cor"/>
+                                    <constraint firstAttribute="trailing" secondItem="WBh-Ec-Fs8" secondAttribute="trailing" id="SlK-Qo-op8"/>
+                                    <constraint firstItem="WBh-Ec-Fs8" firstAttribute="leading" secondItem="Zo5-KL-CZc" secondAttribute="leading" id="TCa-kh-JeM"/>
+                                    <constraint firstAttribute="height" constant="200" id="hA5-8T-w4A"/>
+                                    <constraint firstItem="WBh-Ec-Fs8" firstAttribute="width" secondItem="Zo5-KL-CZc" secondAttribute="width" id="qOj-ka-nzd"/>
+                                    <constraint firstAttribute="bottom" secondItem="WBh-Ec-Fs8" secondAttribute="bottom" id="wMn-ob-ijc"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zo5-KL-CZc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="APf-92-GDF"/>
+                            <constraint firstItem="Zo5-KL-CZc" firstAttribute="leading" secondItem="c5C-xA-W6D" secondAttribute="leading" id="TzW-fj-A5s"/>
+                            <constraint firstAttribute="trailing" secondItem="Zo5-KL-CZc" secondAttribute="trailing" id="YX8-Ky-GQD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tagView" destination="WBh-Ec-Fs8" id="toY-vh-JZD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

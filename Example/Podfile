@@ -1,0 +1,6 @@
+use_frameworks!
+target 'TagView_Tests' do
+  pod 'TagView', :path => '../'
+  
+  
+end

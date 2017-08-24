@@ -1,0 +1,22 @@
+{
+  "name": "TagView",
+  "version": "0.1.0",
+  "summary": "A short description of TagView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dmitry-moqod/TagView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dmitry-moqod": "pulsaru@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/dmitry-moqod/TagView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TagView/Classes/**/*"
+}
