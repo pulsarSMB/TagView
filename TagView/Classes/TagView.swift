@@ -8,19 +8,18 @@
 
 import UIKit
 
-
 @IBDesignable
-class TagView: UIView {
+open class TagView: UIView {
 
-  var buttonBackgroundColor = #colorLiteral(red: 0.476567328, green: 0.3525734544, blue: 0.601198256, alpha: 1)
-  var buttonTintColor = UIColor.white
-  var titleFont = UIFont.systemFont(ofSize: 14)
-  var top: CGFloat = 0.0
-  var leading: CGFloat = 0.0
-  var trailing: CGFloat = 0.0
-  var buttom: CGFloat = 0.0
-  var ySpacing: CGFloat = 5.0
-  var xSpacing: CGFloat = 8.0
+  open var buttonBackgroundColor = #colorLiteral(red: 0.476567328, green: 0.3525734544, blue: 0.601198256, alpha: 1)
+  open var buttonTintColor = UIColor.white
+  open var titleFont = UIFont.systemFont(ofSize: 14)
+  open var top: CGFloat = 0.0
+  open var leading: CGFloat = 0.0
+  open var trailing: CGFloat = 0.0
+  open var buttom: CGFloat = 0.0
+  open var ySpacing: CGFloat = 5.0
+  open var xSpacing: CGFloat = 8.0
   private lazy var heighConstraint: NSLayoutConstraint = {
     let constraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100)
     constraint.isActive = true
@@ -32,7 +31,7 @@ class TagView: UIView {
   }
   
   
-  func createCloudTagsWithTitles(_ titles: [String], target: Any? = nil, action: Selector? = nil) {
+  open func createCloudTagsWithTitles(_ titles: [String], target: Any? = nil, action: Selector? = nil) {
     tagButtons = titles.map { createButtonWithTitle($0, target: target, action: action) }
   }
   
@@ -57,7 +56,7 @@ class TagView: UIView {
 
   // MARK: - Layout tabButtons
 
-  override func layoutSubviews() {
+  override open func layoutSubviews() {
     super.layoutSubviews()
     arrangeTagButton()
   }
@@ -83,7 +82,7 @@ class TagView: UIView {
 
   // MARK: - Interface Builder
 
-  override func prepareForInterfaceBuilder() {
+  override open func prepareForInterfaceBuilder() {
     createCloudTagsWithTitles(["Welcome","to","TagView"])
   }
 
