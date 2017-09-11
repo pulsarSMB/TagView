@@ -13,6 +13,8 @@
 		8A0A24C31F4EBD170019C233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A0A24C21F4EBD170019C233 /* Assets.xcassets */; };
 		8A0A24C61F4EBD170019C233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A0A24C41F4EBD170019C233 /* LaunchScreen.storyboard */; };
 		8A0A24D71F4EBD7E0019C233 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A24CE1F4EBD7E0019C233 /* TagView.swift */; };
+		8A0ADCC51F62639300D476C5 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0ADCC41F62639300D476C5 /* ButtonStyles.swift */; };
+		8AAC1C731F62A1D4004B485C /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAC1C721F62A1D4004B485C /* TagButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8A0A24C51F4EBD170019C233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A0A24C71F4EBD170019C233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A0A24CE1F4EBD7E0019C233 /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagView.swift; path = TagView/Classes/TagView.swift; sourceTree = "<group>"; };
+		8A0ADCC41F62639300D476C5 /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonStyles.swift; path = TagView/Classes/ButtonStyles.swift; sourceTree = "<group>"; };
+		8AAC1C721F62A1D4004B485C /* TagButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagButton.swift; path = TagView/Classes/TagButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				8A0A24CE1F4EBD7E0019C233 /* TagView.swift */,
+				8A0ADCC41F62639300D476C5 /* ButtonStyles.swift */,
+				8AAC1C721F62A1D4004B485C /* TagButton.swift */,
 			);
 			name = TagView;
 			path = Example/Pods/../..;
@@ -157,6 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A0A24BE1F4EBD160019C233 /* ViewController.swift in Sources */,
+				8A0ADCC51F62639300D476C5 /* ButtonStyles.swift in Sources */,
+				8AAC1C731F62A1D4004B485C /* TagButton.swift in Sources */,
 				8A0A24BC1F4EBD160019C233 /* AppDelegate.swift in Sources */,
 				8A0A24D71F4EBD7E0019C233 /* TagView.swift in Sources */,
 			);

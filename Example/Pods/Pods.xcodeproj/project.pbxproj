@@ -14,6 +14,8 @@
 		7BC07679495E443BB5C63553188E368F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		8A0A24601F4EB7F70019C233 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A245F1F4EB7F70019C233 /* TagView.swift */; };
 		8A0A24611F4EB7F70019C233 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0A245F1F4EB7F70019C233 /* TagView.swift */; };
+		8A356C6C1F667BF900BB1459 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A356C6A1F667BF900BB1459 /* ButtonStyles.swift */; };
+		8A356C6D1F667BF900BB1459 /* TagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A356C6B1F667BF900BB1459 /* TagButton.swift */; };
 		F9EF189A71DB03A8A451E78A27E8823C /* TagView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 003EA2E0756DA5B4E049444D35F214DE /* TagView-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		7EC62661ECDEF6535C05D362AFD4244F /* TagView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TagView-prefix.pch"; sourceTree = "<group>"; };
 		883BB3CDE25D2D93FF377BF3CD946604 /* TagView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TagView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0A245F1F4EB7F70019C233 /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagView.swift; path = TagView/Classes/TagView.swift; sourceTree = "<group>"; };
+		8A356C6A1F667BF900BB1459 /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonStyles.swift; path = TagView/Classes/ButtonStyles.swift; sourceTree = "<group>"; };
+		8A356C6B1F667BF900BB1459 /* TagButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagButton.swift; path = TagView/Classes/TagButton.swift; sourceTree = "<group>"; };
 		9118E737536E5C732BBACC6086E1D8F8 /* Pods-TagView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TagView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E7C6A7BA4AD53BD067466004A7328CD /* Pods-TagView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TagView_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				8A0A245F1F4EB7F70019C233 /* TagView.swift */,
+				8A356C6A1F667BF900BB1459 /* ButtonStyles.swift */,
+				8A356C6B1F667BF900BB1459 /* TagButton.swift */,
 				78757C178F329C4200FE423CBE26179C /* Support Files */,
 			);
 			name = TagView;
@@ -272,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				58C9AC4AF874E6E8E4C7741E4D79E2D5 /* Pods-TagView_Tests-dummy.m in Sources */,
+				8A356C6C1F667BF900BB1459 /* ButtonStyles.swift in Sources */,
+				8A356C6D1F667BF900BB1459 /* TagButton.swift in Sources */,
 				8A0A24601F4EB7F70019C233 /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
