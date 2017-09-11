@@ -22,7 +22,12 @@ public class TagView: UIView {
       .filter { $0.style! == tagStyles[0] }
       .map { $0.titleLabel?.text ?? "No title" }
   }
-  private var editTagButton: (TagButton?, top: Bool) = (nil, false)
+  private var editTagButton: (TagButton?, top: Bool) = (nil, false) {
+    didSet {
+      guard let tagButton = oldValue.0 else { return }
+        tagButton.removeFromSuperview()
+    }
+  }
   private lazy var heighConstraint: NSLayoutConstraint = {
     let constraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100)
     constraint.isActive = true
