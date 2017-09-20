@@ -14,6 +14,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 Swift Version | TagView Version
 ----- | -----
 Swift 3.1 | 0.1.0 or later
+Swift 4 | 0.9.5 or later
 
 ## Installation
 
