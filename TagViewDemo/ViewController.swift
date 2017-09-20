@@ -23,7 +23,7 @@ class ViewController: UIViewController {
   }
   
   
-  func actionButton(_ sender: UIButton) {
+  @objc func actionButton(_ sender: UIButton) {
     print(sender.title(for: .normal) ?? "")
   }
 
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
 
   
   
-  func actionEditButton(_ sender: UIButton) {
+  @objc func actionEditButton(_ sender: UIButton) {
     print(tagView.selectedTagTitles)
   }
   
