@@ -11,22 +11,16 @@ import UIKit
 public class TagButton: UIButton {
 
   var style: ButtonStyles? {
-    didSet { setStyle() }
+    didSet { setStyle(style) }
   }
   
-  public class func `init`(title: String, style: ButtonStyles) -> TagButton {
-    let tabButton = TagButton(type: .system)
-    tabButton.setTitle(title, for: .normal)
-    tabButton.style = style
-    return tabButton
+  convenience init(title: String, style: ButtonStyles) {
+    self.init(type: .system)
+    self.setTitle(title, for: .normal)
+    self.setStyle(style)
   }
   
-  public override func setTitle(_ title: String?, for state: UIControlState) {
-    super.setTitle(title, for: state)
-    setStyle()
-  }
-  
-  private func setStyle() {
+  private func setStyle(_ style: ButtonStyles?) {
     guard let style = style else { return }
     self.backgroundColor = style.backgroundColor
     self.tintColor = style.tintColor

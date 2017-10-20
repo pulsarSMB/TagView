@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/TagView.svg?style=flat)](http://cocoapods.org/pods/TagView)
 [![License](https://img.shields.io/cocoapods/l/TagView.svg?style=flat)](http://cocoapods.org/pods/TagView)
 [![Platform](https://img.shields.io/cocoapods/p/TagView.svg?style=flat)](http://cocoapods.org/pods/TagView)
-[![Swift Version](https://img.shields.io/badge/Swift-3.1-green.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift Version](https://img.shields.io/badge/Swift-4-green.svg?style=flat)](https://developer.apple.com/swift)
 
 ## Example
 

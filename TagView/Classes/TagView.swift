@@ -33,7 +33,7 @@ public class TagView: UIView {
     constraint.isActive = true
     return constraint }()
   private var tagButtons = [TagButton]() {
-    didSet { _ = oldValue.map { $0.removeFromSuperview() } }
+    didSet { oldValue.forEach { $0.removeFromSuperview() } }
   }
   
   @objc private func actionSelectTag(_ sender: TagButton) {
@@ -73,29 +73,27 @@ public class TagView: UIView {
   
   private func arrangeTagButton() {
     let maxViewWidth = self.frame.width
-    var xOffset: CGFloat = leading
-    var yOffset: CGFloat = top
-    var heightTagButton: CGFloat = 0
+    var offset = CGPoint(x: leading, y: top)
+    var heightTag: CGFloat = 0
     if let button = editTagButton.0, editTagButton.top {
-      layoutButton(button, maxViewWidth, &heightTagButton, &xOffset, &yOffset)
+      layoutButton(button, maxViewWidth, &heightTag, &offset)
     }
-    _ = tagButtons.map { layoutButton($0, maxViewWidth, &heightTagButton, &xOffset, &yOffset) }
+    tagButtons.forEach { layoutButton($0, maxViewWidth, &heightTag, &offset) }
     if let button = editTagButton.0, !editTagButton.top {
-      layoutButton(button, maxViewWidth, &heightTagButton, &xOffset, &yOffset)
+      layoutButton(button, maxViewWidth, &heightTag, &offset)
     }
-    heighConstraint.constant = yOffset + heightTagButton + buttom
+    heighConstraint.constant =  offset.y + heightTag + buttom
   }
   
-  private func layoutButton(_ button: TagButton, _ maxViewWidth: CGFloat, _ heightTagButton: inout CGFloat, _ xOffset: inout CGFloat, _ yOffset: inout CGFloat) {
-    heightTagButton = button.frame.height
+  private func layoutButton(_ button: TagButton, _ maxViewWidth: CGFloat, _ heightTag: inout CGFloat, _ offset: inout CGPoint) {
+    heightTag = button.frame.height
     let widthTagButton = button.frame.width
-    if (xOffset + widthTagButton + trailing) > maxViewWidth {
-      xOffset = leading
-      yOffset += heightTagButton + ySpacing
+    if (offset.x + widthTagButton + trailing) > maxViewWidth {
+      offset.x = leading
+      offset.y += heightTag + ySpacing
     }
-    button.frame.origin.x = xOffset
-    button.frame.origin.y = yOffset
-    xOffset += widthTagButton + xSpacing
+    button.frame.origin = offset
+    offset.x += widthTagButton + xSpacing
   }
   
   
