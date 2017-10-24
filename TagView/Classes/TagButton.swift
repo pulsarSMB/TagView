@@ -9,18 +9,25 @@
 import UIKit
 
 public class TagButton: UIButton {
-
+  
   var style: ButtonStyles? {
-    didSet { setStyle(style) }
+    didSet { oldValue != nil ? setStyle() : nil }
   }
+  
   
   convenience init(title: String, style: ButtonStyles) {
     self.init(type: .system)
+    self.style = style
     self.setTitle(title, for: .normal)
-    self.setStyle(style)
   }
   
-  private func setStyle(_ style: ButtonStyles?) {
+  
+  public override func setTitle(_ title: String?, for state: UIControlState) {
+    super.setTitle(title, for: state)
+    setStyle()
+  }
+  
+  private func setStyle() {
     guard let style = style else { return }
     self.backgroundColor = style.backgroundColor
     self.tintColor = style.tintColor
@@ -32,6 +39,7 @@ public class TagButton: UIButton {
     self.layer.cornerRadius = radius
     self.frame.size.width += radius + style.margin
   }
-
+  
   
 }
+
