@@ -25,7 +25,7 @@ public class TagView: UIView {
   private var editTagButton: (TagButton?, top: Bool) = (nil, false) {
     didSet {
       guard let tagButton = oldValue.0 else { return }
-        tagButton.removeFromSuperview()
+      tagButton.removeFromSuperview()
     }
   }
   private lazy var heighConstraint: NSLayoutConstraint = {
@@ -52,12 +52,14 @@ public class TagView: UIView {
   
   public func createCloudTagsWithTitles(_ titles: [String], target: Any? = nil, action: Selector? = nil) {
     tagButtons = titles.map { createButtonWithTitle($0, style: .select, target: target, action: action) }
+    layoutIfNeeded()
   }
   
   public func createCloudTagsWithTitles(_ titles: [(String, Bool)]) {
     tagButtons = titles.map { createButtonWithTitle($0.0,
                                                     style: $0.1 ? tagStyles[0] : tagStyles[1],
                                                     target: self, action: #selector(actionSelectTag)) }
+    layoutIfNeeded()
   }
   
   public func addEditButton(title: String, style: ButtonStyles = .action, top: Bool = false, target: Any?, action: Selector?) {
@@ -108,3 +110,4 @@ extension TagView {
   
   
 }
+
